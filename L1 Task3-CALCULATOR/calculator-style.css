@@ -1,0 +1,72 @@
+/* General Layout */
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+}
+
+.iphone-calculator {
+    width: 320px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Display Styling */
+.display {
+    color: white;
+    text-align: right;
+    padding: 20px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+#output { 
+    font-size: 4rem; 
+    font-weight: 300; 
+    margin: 0;
+}
+
+#history { 
+    color: #888; 
+    font-size: 1.2rem; 
+    min-height: 1.5rem;
+}
+
+/* CSS Grid for button alignment */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px;
+}
+
+.btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: brightness 0.2s;
+}
+
+.btn:active { 
+    filter: brightness(1.5); 
+}
+
+/* Color Classes */
+.dark-gray { background-color: #333; color: white; }
+.light-gray { background-color: #a5a5a5; color: black; }
+.orange { background-color: #ff9f0a; color: white; }
